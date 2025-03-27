@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "css-grid",
+      "title": "Как работать с CSS Grid",
+      "preview": "Грид-раскладка представляет собой двумерную систему...",
+      "content": "CSS Grid Layout — это мощная система компоновки в CSS, которая позволяет создавать сложные макеты с минимальным количеством кода. В отличие от Flexbox, который работает в одном направлении, Grid позволяет размещать элементы как по горизонтали, так и по вертикали. Это особенно удобно при построении структурированных интерфейсов, таких как галереи, таблицы и страницы с несколькими колонками. Основные свойства включают: display: grid, grid-template-columns, grid-template-rows, gap, и другие. Важно понимать концепцию grid lines и grid areas, чтобы максимально эффективно использовать Grid. Поддержка Grid существует во всех современных браузерах, и его использование значительно упрощает вёрстку адаптивных интерфейсов.",
+      "date": "2025-02-20",
+      "category": "Front-end",
+      "likes": 4,
+      "readingTime": "3 минуты",
+      "image": "https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/8d374c1e-228a-47e8-be5b-10fa1f4d40c8/mrh-css-grid-fig-01-large-opt.png"
+    },
+    {
+      "id": 2,
+      "slug": "flexbox-guide",
+      "title": "Полный гайд по Flexbox",
+      "preview": "Flexbox — это одномерная система компоновки...",
+      "content": "Flexbox (Flexible Box Layout) — это технология CSS, предназначенная для эффективного расположения элементов в контейнере с возможностью изменения их размеров и порядка. Flexbox решает множество проблем с выравниванием, распределением пространства и адаптивной вёрсткой. Основные свойства: display: flex, justify-content, align-items, flex-direction и flex-wrap. Flexbox особенно полезен при создании интерфейсов с динамическим расположением блоков: меню, карточки, футеры и заголовки. Он поддерживается всеми современными браузерами и является отличной основой для построения однострочных и многострочных макетов.",
+      "date": "2025-02-18",
+      "category": "Front-end",
+      "likes": 7,
+      "readingTime": "4 минуты",
+      "image": "https://blog.pixelfreestudio.com/wp-content/uploads/2024/07/1_OLorod4d77ZQwOhWTs7Jdw-1024x596.jpg"
+    },
+    {
+      "id": 3,
+      "slug": "react-hooks-intro",
+      "title": "Введение в React Hooks",
+      "preview": "React Hooks — это способ работы с состоянием и жизненным циклом в функциональных компонентах...",
+      "content": "React Hooks были представлены в версии React 16.8 и полностью изменили подход к работе с состоянием и побочными эффектами. Раньше для этого приходилось использовать классы, но теперь функциональные компоненты могут быть столь же мощными. useState позволяет создавать локальное состояние, useEffect — управлять побочными эффектами (запросы, таймеры и т.д.), useContext — получать доступ к глобальному контексту, useRef — создавать ссылку на DOM-элемент или сохранять значение вне рендера, а useMemo и useCallback — оптимизировать производительность. Использование хуков упрощает структуру кода и делает компоненты легче для чтения и тестирования. Однако, важно соблюдать правила хуков, такие как вызов только на верхнем уровне и только внутри функций-компонентов.",
+      "date": "2025-02-25",
+      "category": "React",
+      "likes": 10,
+      "readingTime": "6 минут",
+      "image": "https://tsh.io/wp-content/uploads/2020/10/react-hooks-best-practices-lead_.jpg"
+    }
+  ],
+  "user": {
+    "id": 1,
+    "username": "admin",
+    "password": "1234",
+    "email": "admin@example.com",
+    "role": "user"
+  },
+  "comments": [
+    {
+      "id": 1,
+      "post_id": 1,
+      "name": "John Doe",
+      "text": "I really enjoyed this article. It was so informative and easy to follow. Thank you for sharing!",
+      "createdAt": "2023-07-31T12:34:56Z"
+    },
+    {
+      "id": 2,
+      "post_id": 1,
+      "name": "Jane Smith",
+      "text": "I found the article very helpful. It covered a wide range of topics and provided clear explanations.",
+      "createdAt": "2023-07-31T13:45:12Z"
+    },
+    {
+      "id": 3,
+      "post_id": 2,
+      "name": "Bob Johnson",
+      "text": "I completely agree with the author's perspective. The article was well-written and informative.",
+      "createdAt": "2023-07-31T14:20:45Z"
+    },
+    {
+      "id": 4,
+      "post_id": 3,
+      "name": "Alice Brown",
+      "text": "The article provided a great overview of React Hooks. It was easy to understand and very helpful.",
+      "createdAt": "2023-07-31T15:10:30Z"
+    }
+  ]
+}

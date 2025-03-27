@@ -1,7 +1,19 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  reactStrictMode: true,
 
-export default nextConfig;
+  eslint: {
+    ignoreDuringBuilds: true
+  },
+
+  typescript: {
+    ignoreBuildErrors: false
+  },
+
+  images: {
+    domains: ['archive.smashing.media', 'blog.pixelfreestudio.com', 'tsh.io']
+  }
+}
+
+export default nextConfig
