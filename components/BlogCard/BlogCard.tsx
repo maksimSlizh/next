@@ -2,22 +2,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Svg } from '@/public'
 import styles from './BlogCard.module.scss'
+import { IPost } from '@/types'
 
-type BlogCardProps = {
-  post: {
-    id: number
-    slug: string
-    title: string
-    preview: string
-    image: string
-    date: string
-    readingTime: string
-    category: string
-    likes: number
-  }
-}
-
-const BlogCard = ({ post }: BlogCardProps) => {
+const BlogCard = ({ post }: { post: IPost }) => {
   return (
     <Link href={`/blog/${post.slug}`} className={styles.card}>
       <Image

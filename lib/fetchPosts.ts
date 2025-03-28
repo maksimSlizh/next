@@ -1,6 +1,6 @@
 export async function fetchPosts() {
   const res = await fetch('http://localhost:3001/posts', {
-    next: { revalidate: 60 },
+    next: { revalidate: 3600 },
     cache: 'force-cache'
   })
 

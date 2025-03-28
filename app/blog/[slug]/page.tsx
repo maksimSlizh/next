@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import styles from './post.module.scss'
-import { Comments } from '@/app/components'
+import { Comments } from '@/components'
 
 export async function generateStaticParams() {
   const res = await fetch('http://localhost:3001/posts')

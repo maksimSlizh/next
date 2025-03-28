@@ -1,4 +1,4 @@
-import { checkIsAdmin } from '@/app/lib'
+import { checkIsAdmin } from '@/lib'
 import { redirect } from 'next/navigation'
 
 const AdminPage = async () => {
