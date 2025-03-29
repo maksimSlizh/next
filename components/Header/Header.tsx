@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styles from './Header.module.scss'
+import { checkIsAdmin } from '@/lib'
 
 const baseMenu = [
   {
@@ -14,19 +15,8 @@ const baseMenu = [
   }
 ]
 
-async function getUser() {
-  const res = await fetch('http://localhost:3001/user', {
-    cache: 'no-store'
-  })
-
-  if (!res.ok) return null
-
-  return res.json()
-}
-
 const Header = async () => {
-  const user = await getUser()
-  const isAdmin = user?.role === 'admin'
+  const isAdmin = await checkIsAdmin()
 
   const filteredMenu = isAdmin
     ? baseMenu

@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true
   },
 
+  sassOptions: {
+    includePaths: ['./styles'] // чтобы работал '@/styles/...'
+  },
+
   typescript: {
     ignoreBuildErrors: false
   },

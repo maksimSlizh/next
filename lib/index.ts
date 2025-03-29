@@ -1,2 +1,2 @@
 export * from './fetchPosts'
-export * from './checkIsAuth'
+export * from './user/checkIsAuth'

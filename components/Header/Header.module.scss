@@ -1,7 +1,11 @@
+@use '../../styles/variables.scss' as *;
+
 .header {
-  background-color: #222;
+  background-color: $bg-color-dark;
   padding: 1rem;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .nav {
@@ -9,12 +13,8 @@
   gap: 1.5rem;
 
   a {
-    color: white;
+    color: $color-nav-link;
     text-decoration: none;
     font-weight: 500;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }

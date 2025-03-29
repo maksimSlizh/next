@@ -1,19 +1,20 @@
 import { notFound } from 'next/navigation'
 import styles from './post.module.scss'
 import { Comments } from '@/components'
+import { IPost } from '@/types'
 
 export async function generateStaticParams() {
   const res = await fetch('http://localhost:3001/posts')
   const posts = await res.json()
 
-  return posts.map((post: any) => ({
+  return posts.map((post: IPost) => ({
     slug: post.slug
   }))
 }
 
 async function getPost(slug: string) {
   const res = await fetch(`http://localhost:3001/posts?slug=${slug}`, {
-    next: { revalidate: 60 }
+    next: { revalidate: 3600 }
   })
 
   const posts = await res.json()
@@ -25,11 +26,7 @@ async function getPost(slug: string) {
   return posts[0]
 }
 
-export default async function BlogPostPage({
-  params
-}: {
-  params: { slug: string }
-}) {
+export default async function BlogPostPage({params}: {params: { slug: string }}) {
   const post = await getPost(params.slug)
 
   if (!post) {
