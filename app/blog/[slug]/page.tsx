@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
+import Image from 'next/image'
 import styles from './post.module.scss'
 import { Comments } from '@/components'
 import { IPost } from '@/types'
+import { getPost } from '@/lib'
 
 export async function generateStaticParams() {
   const res = await fetch('http://localhost:3001/posts')
@@ -12,34 +14,33 @@ export async function generateStaticParams() {
   }))
 }
 
-async function getPost(slug: string) {
-  const res = await fetch(`http://localhost:3001/posts?slug=${slug}`, {
-    next: { revalidate: 3600 }
-  })
-
-  const posts = await res.json()
-
-  if (!posts || posts.length === 0) {
-    return null
+type PageProps = {
+  params: {
+    slug: string
   }
-
-  return posts[0]
 }
 
-export default async function BlogPostPage({params}: {params: { slug: string }}) {
-  const post = await getPost(params.slug)
 
-  if (!post) {
-    notFound()
-  }
+export default async function BlogPostPage({ params }: PageProps) {
+  const { slug } = await Promise.resolve(params)
+
+  const post = await getPost(slug)
+
+  if (!post) notFound()
 
   return (
     <main className={styles.post}>
       <h1 className={styles.title}>{post.title}</h1>
-      <img src={post.image} alt={post.title} className={styles.image} />
+      <Image
+        src={post.image}
+        alt={post.title}
+        width={800}
+        height={400}
+        priority
+        className={styles.image}
+      />
       <div className={styles.meta}>
-        <span>{post.category}</span> • <span>{post.date}</span> •{' '}
-        <span>{post.readingTime}</span>
+        <span>{post.category}</span> • <span>{post.date}</span> • <span>{post.readingTime}</span>
       </div>
       <div className={styles.content}>
         <p>{post.content}</p>

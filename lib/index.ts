@@ -1,2 +1,5 @@
-export * from './fetchPosts'
+export * from './post/fetchPosts'
+export * from './post/fetchPost'
 export * from './user/checkIsAuth'
+export * from './comments/getComments'
+export * from './comments/createComment'

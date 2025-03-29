@@ -1,4 +1,4 @@
-export async function fetchPosts() {
+export async function fetchPosts () {
   const res = await fetch('http://localhost:3001/posts', {
     next: { revalidate: 3600 },
     cache: 'force-cache'
@@ -10,3 +10,4 @@ export async function fetchPosts() {
 
   return res.json()
 }
+

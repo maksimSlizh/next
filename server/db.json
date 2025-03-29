@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "slug": "css-grid",
       "title": "Как работать с CSS Grid",
       "preview": "Грид-раскладка представляет собой двумерную систему...",
@@ -13,7 +13,7 @@
       "image": "https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/8d374c1e-228a-47e8-be5b-10fa1f4d40c8/mrh-css-grid-fig-01-large-opt.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "slug": "flexbox-guide",
       "title": "Полный гайд по Flexbox",
       "preview": "Flexbox — это одномерная система компоновки...",
@@ -25,7 +25,7 @@
       "image": "https://blog.pixelfreestudio.com/wp-content/uploads/2024/07/1_OLorod4d77ZQwOhWTs7Jdw-1024x596.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "slug": "react-hooks-intro",
       "title": "Введение в React Hooks",
       "preview": "React Hooks — это способ работы с состоянием и жизненным циклом в функциональных компонентах...",
@@ -46,32 +46,60 @@
   },
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "post_id": 1,
       "name": "John Doe",
       "text": "I really enjoyed this article. It was so informative and easy to follow. Thank you for sharing!",
       "createdAt": "2023-07-31T12:34:56Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "post_id": 1,
       "name": "Jane Smith",
       "text": "I found the article very helpful. It covered a wide range of topics and provided clear explanations.",
       "createdAt": "2023-07-31T13:45:12Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "post_id": 2,
       "name": "Bob Johnson",
       "text": "I completely agree with the author's perspective. The article was well-written and informative.",
       "createdAt": "2023-07-31T14:20:45Z"
     },
     {
-      "id": 4,
+      "id": "4",
       "post_id": 3,
       "name": "Alice Brown",
       "text": "The article provided a great overview of React Hooks. It was easy to understand and very helpful.",
       "createdAt": "2023-07-31T15:10:30Z"
+    },
+    {
+      "id": "44ba",
+      "author": "makims",
+      "text": "slizh",
+      "postId": "1",
+      "createdAt": "2025-03-29T13:58:19.229Z"
+    },
+    {
+      "id": "b709",
+      "author": "makims",
+      "text": "slizh",
+      "postId": "1",
+      "createdAt": "2025-03-29T13:58:26.467Z"
+    },
+    {
+      "id": "3fa6",
+      "author": "Hi",
+      "text": "asd dsa",
+      "postId": "1",
+      "createdAt": "2025-03-29T14:22:52.024Z"
+    },
+    {
+      "id": "6151",
+      "author": "makims",
+      "text": "hollo",
+      "postId": "1",
+      "createdAt": "2025-03-29T14:33:32.016Z"
     }
   ]
 }
